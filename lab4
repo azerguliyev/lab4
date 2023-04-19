@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ArraySum {
+    public static void main(String[] args) {
+        int[] arr = new int[15];
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter 15 numbers
+        System.out.println("Enter 15 numbers:");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        // Calculate sum of the numbers
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+        }
+
+        // Print the sum
+        System.out.println("The sum of the numbers is " + sum);
+    }
+}
