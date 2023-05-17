@@ -1,0 +1,63 @@
+class Person:
+    def __init__(self, id, name, age):
+        self.id = id
+        self.name = name
+        self.age = age
+    
+    def person(self):
+        print("ID:", self.id)
+        print("Name:", self.name)
+        print("Age:", self.age)
+    
+    def greetings(self):
+        print("Hello, have a good day!")
+
+
+class Teacher(Person):
+    def __init__(self, id, name, age, profession, experience, graduating_year):
+        super().__init__(id, name, age)
+        self.profession = profession
+        self.experience = experience
+        self.graduating_year = graduating_year
+    
+    def additional_info(self):
+        print("Experience:", self.experience)
+        print("Graduating year:", self.graduating_year)
+        print("Profession:", self.profession)
+    
+    def teaches(self):
+        print(f"I teach {self.profession} in the university.")
+
+
+class Student(Person):
+    def __init__(self, id, name, age, GPA, group_number, entrance_year):
+        super().__init__(id, name, age)
+        self.GPA = GPA
+        self.group_number = group_number
+        self.entrance_year = entrance_year
+    
+    def additional_info(self):
+        print("GPA:", self.GPA)
+        print("Group number:", self.group_number)
+        print("Entrance year:", self.entrance_year)
+    
+    def pass_exam(self):
+        result = True if self.GPA > 5.0 else False
+        print(result)
+
+
+teacher1 = Teacher(1, 'Kenan', 35, 'Math', 5, 1998)
+student1 = Student(1, 'Imran', 20, 5.1, '691.20', 2020)
+
+teacher1.person()
+teacher1.teaches()
+teacher1.additional_info()
+teacher1.greetings()
+
+student1.pass_exam()
+student1.person()
+student1.additional_info()
+student1.greetings()
+ 
+    
+     
